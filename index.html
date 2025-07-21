@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Project - Environmental Awareness & Paper Waste Reduction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(18, 102, 67, 0.9) 0%, rgba(40, 162, 113, 0.9) 100%);
+        }
+        .counter-box {
+            box-shadow: 0 10px 30px rgba(40, 162, 113, 0.2);
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .event-card:hover {
+            transform: scale(1.02);
+        }
+        .partner-logo:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+        }
+        .leaf-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2338a169' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-xl mr-2">RP</div>
+                    <span class="text-emerald-800 font-bold text-xl">Ripple Project</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-emerald-700 hover:text-emerald-500 font-medium">Home</a>
+                    <a href="#team" class="text-gray-600 hover:text-emerald-500 font-medium">Core Team</a>
+                    <a href="#events" class="text-gray-600 hover:text-emerald-500 font-medium">Events</a>
+                    <a href="#partners" class="text-gray-600 hover:text-emerald-500 font-medium">Partners</a>
+                    <a href="#join" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-medium transition duration-300">Join Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-emerald-700 font-medium">Home</a>
+                <a href="#team" class="block py-2 text-gray-600 hover:text-emerald-500">Core Team</a>
+                <a href="#events" class="block py-2 text-gray-600 hover:text-emerald-500">Events</a>
+                <a href="#partners" class="block py-2 text-gray-600 hover:text-emerald-500">Partners</a>
+                <a href="#join" class="block mt-2 bg-emerald-600 text-white px-4 py-2 rounded-full font-medium text-center">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Creating Waves of Change in Paper Waste Reduction</h1>
+                <p class="text-lg md:text-xl mb-8">We mobilize youth to reduce paper waste through education, innovation, and community action. Every small ripple creates a wave of environmental impact.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#join" class="bg-white text-emerald-700 hover:bg-gray-100 px-6 py-3 rounded-full font-bold text-center transition duration-300">Join Our Movement</a>
+                    <a href="#events" class="border-2 border-white text-white hover:bg-white hover:text-emerald-700 px-6 py-3 rounded-full font-bold text-center transition duration-300">Upcoming Events</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-emerald-400 rounded-full opacity-20 absolute -top-10 -left-10"></div>
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-emerald-300 rounded-full opacity-20 absolute -bottom-10 -right-10"></div>
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Youth planting trees" class="relative z-10 rounded-lg shadow-2xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Counters -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-emerald-800 mb-4">Our Impact So Far</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Through collective action, we've made significant strides in reducing paper waste and engaging youth in environmental stewardship.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="counter-box bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-emerald-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-emerald-700 mb-2" id="member-counter">0</h3>
+                    <p class="text-gray-600">Active Members</p>
+                </div>
+                <div class="counter-box bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-recycle text-emerald-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-emerald-700 mb-2" id="paper-counter">0</h3>
+                    <p class="text-gray-600">Pounds of Paper Recycled</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-emerald-50 leaf-pattern">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1613&q=80" alt="Hands holding a plant" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <h2 class="text-3xl font-bold text-emerald-800 mb-4">Our Mission</h2>
+                        <p class="text-gray-600 mb-6">The Ripple Project empowers young people to become environmental leaders by tackling the critical issue of paper waste through education, innovation, and community action.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-emerald-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-seedling text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-emerald-700">Education</h4>
+                                    <p class="text-gray-600">We teach sustainable practices and the environmental impact of paper waste through workshops and school programs.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-emerald-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-lightbulb text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-emerald-700">Innovation</h4>
+                                    <p class="text-gray-600">We develop creative solutions for paper reduction and recycling through youth-led design challenges.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-emerald-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-hands-helping text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-emerald-700">Community Action</h4>
+                                    <p class="text-gray-600">We organize local clean-ups, recycling drives, and advocacy campaigns to create tangible change.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-emerald-800 mb-4">Meet Our Core Team</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Passionate young leaders driving the Ripple Project forward with expertise in environmental science, education, and community organizing.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Team member" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-1">Dr. Sarah Chen</h3>
+                        <p class="text-emerald-600 mb-3">Founder & Executive Director</p>
+                        <p class="text-gray-600">Environmental scientist with 10+ years experience in waste management policy and youth education.</p>
+                        <div class="flex mt-4 space-x-3">
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team member" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-1">Jamal Williams</h3>
+                        <p class="text-emerald-600 mb-3">Program Director</p>
+                        <p class="text-gray-600">Former teacher specializing in environmental education and community engagement strategies.</p>
+                        <div class="flex mt-4 space-x-3">
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team member" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-1">Priya Patel</h3>
+                        <p class="text-emerald-600 mb-3">Operations Manager</p>
+                        <p class="text-gray-600">Nonprofit management expert with a focus on sustainable operations and volunteer coordination.</p>
+                        <div class="flex mt-4 space-x-3">
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="team-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out">
+                    <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80" alt="Team member" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-1">Alex Johnson</h3>
+                        <p class="text-emerald-600 mb-3">Technology Lead</p>
+                        <p class="text-gray-600">Develops digital tools to track paper waste reduction and facilitate community participation.</p>
+                        <div class="flex mt-4 space-x-3">
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-emerald-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-emerald-800 mb-4">Our Events</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Join us for workshops, clean-ups, and educational programs that make a real difference in paper waste reduction.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Upcoming Event 1 -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=770&q=80" alt="Event" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold">Upcoming</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>June 15, 2023 | 10:00 AM - 2:00 PM</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-emerald-800 mb-2">Community Paper Recycling Drive</h3>
+                        <p class="text-gray-600 mb-4">Join us at Central Park for our quarterly recycling event. Bring your paper waste and learn about sustainable alternatives.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Central Park, Main Entrance</span>
+                            </div>
+                            <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">Register →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Upcoming Event 2 -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Event" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold">Upcoming</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>June 22, 2023 | 6:00 PM - 8:00 PM</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-emerald-800 mb-2">Digital Alternatives Workshop</h3>
+                        <p class="text-gray-600 mb-4">Learn how to reduce paper use in schools and offices through digital tools and sustainable practices.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Community Center, Room 203</span>
+                            </div>
+                            <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">Register →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Past Event -->
+                <div class="event-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1522&q=80" alt="Event" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-bold">Past Event</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>May 5, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-emerald-800 mb-2">Earth Day School Challenge</h3>
+                        <p class="text-gray-600 mb-4">We engaged 15 local schools in a paper waste reduction competition, collecting over 2 tons of recyclable paper.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-check-circle mr-2 text-emerald-600"></i>
+                                <span>2,150 lbs recycled</span>
+                            </div>
+                            <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">See Photos →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-bold transition duration-300">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-emerald-800 mb-4">Our Valued Partners</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We collaborate with organizations and businesses that share our commitment to environmental sustainability and youth empowerment.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center max-w-5xl mx-auto">
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="Partner logo" class="h-12 object-contain opacity-70 hover:opacity-100">
+                </div>
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_logo_%282012%29.svg/1024px-Microsoft_logo_%282012%29.svg.png" alt="Partner logo" class="h-10 object-contain opacity-70 hover:opacity-100">
+                </div>
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Stanford_University_logo_%282003%29.svg/1200px-Stanford_University_logo_%282003%29.svg.png" alt="Partner logo" class="h-12 object-contain opacity-70 hover:opacity-100">
+                </div>
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/National_Geographic_Logo.svg/1024px-National_Geographic_Logo.svg.png" alt="Partner logo" class="h-12 object-contain opacity-70 hover:opacity-100">
+                </div>
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" alt="Partner logo" class="h-12 object-contain opacity-70 hover:opacity-100">
+                </div>
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="Partner logo" class="h-10 object-contain opacity-70 hover:opacity-100">
+                </div>
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Partner logo" class="h-10 object-contain opacity-70 hover:opacity-100">
+                </div>
+                <div class="partner-logo p-4 flex items-center justify-center transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Samsung_Logo_2005.png/1024px-Samsung_Logo_2005.png" alt="Partner logo" class="h-10 object-contain opacity-70 hover:opacity-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-20 bg-emerald-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
+                <p class="text-lg md:text-xl mb-10">Join our growing community of environmentally conscious youth and help create waves of change in paper waste reduction.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-6">Sign Up Today</h3>
+                    <form id="signup-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" id="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition duration-300" required>
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" id="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition duration-300" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition duration-300" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition duration-300">
+                        </div>
+                        <div>
+                            <label for="role" class="block text-gray-700 font-medium mb-2">I want to join as:</label>
+                            <select id="role" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition duration-300">
+                                <option value="volunteer">Volunteer</option>
+                                <option value="member">Member</option>
+                                <option value="partner">Organization/Partner</option>
+                                <option value="donor">Donor</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Why are you interested in joining Ripple Project?</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition duration-300"></textarea>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="newsletter" class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
+                            <label for="newsletter" class="ml-2 block text-gray-700">Subscribe to our monthly newsletter</label>
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-emerald-800 mb-4">What People Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our members, partners, and community about their experiences with Ripple Project.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Ripple Project transformed how our school approaches paper waste. Our students are now leading the charge in sustainability initiatives!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Testimonial" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-emerald-800">Maria Gonzalez</h4>
+                            <p class="text-gray-500 text-sm">High School Principal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As a volunteer, I've gained valuable skills in environmental advocacy while making a tangible impact in my community. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Testimonial" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-emerald-800">David Kim</h4>
+                            <p class="text-gray-500 text-sm">College Student & Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Partnering with Ripple Project has helped our company reduce paper waste by 40% while engaging employees in meaningful sustainability work."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Testimonial" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-emerald-800">Lisa Thompson</h4>
+                            <p class="text-gray-500 text-sm">Corporate Sustainability Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-emerald-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Stay Updated</h2>
+                <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for the latest on events, initiatives, and tips for reducing paper waste.</p>
+                <form class="flex flex-col sm:flex-row max-w-md mx-auto sm:max-w-xl">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg sm:rounded-r-none rounded-r-lg focus:outline-none text-gray-800">
+                    <button type="submit" class="bg-emerald-800 hover:bg-emerald-900 px-6 py-3 rounded-r-lg sm:rounded-l-none rounded-l-lg font-medium mt-2 sm:mt-0 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-lg mr-2">RP</div>
+                        <span class="text-xl font-bold">Ripple Project</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Creating waves of change in paper waste reduction through youth empowerment and community action.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition duration-300">Our Team</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition duration-300">Events</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white transition duration-300">Partners</a></li>
+                        <li><a href="#join" class="text-gray-400 hover:text-white transition duration-300">Join Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Paper Waste Facts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Reduction Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Educational Materials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Research & Reports</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-emerald-500"></i>
+                            <span>123 Green Way, Eco City, EC 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-emerald-500"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-emerald-500"></i>
+                            <span>info@rippleproject.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Ripple Project. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Counter animation
+        function animateCounter(elementId, target, duration = 2000) {
+            const element = document.getElementById(elementId);
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 16);
+        }
+
+        // Initialize counters when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('member-counter', 5243);
+                    animateCounter('paper-counter', 124560);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.5});
+
+        const counterSection = document.querySelector('.counter-box');
+        if (counterSection) {
+            observer.observe(counterSection);
+        }
+
+        // Form submission
+        const signupForm = document.getElementById('signup-form');
+        if (signupForm) {
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your interest in Ripple Project! We will contact you soon.');
+                signupForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
